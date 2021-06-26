@@ -8,9 +8,9 @@
 import Foundation
 
 public class HomeItem: HomeBaseItem{
-    let item: PersonsQuery
+    let item: PersonsQuery.Data.Person
 
-    init(identity: String, item: PersonsQuery) {
+    init(identity: String, item: PersonsQuery.Data.Person) {
         self.item = item
         super.init(identity: identity)
     }

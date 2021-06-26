@@ -15,6 +15,7 @@ class HomeViewModelImpl: HomeViewModel {
     var output: BehaviorRelay<HomeOutput> = BehaviorRelay.init(value: HomeOutput(items: [], event: nil))
     
     public struct Dependencies {
+        let birthdaysRepository: BirthdaysRepositoryImpl
     }
     
     var dependencies: Dependencies
@@ -30,10 +31,47 @@ extension HomeViewModelImpl {
     
     func bindViewModel() -> [Disposable] {
         var disposables = [Disposable]()
+        disposables.append(self.input
+                            .observe(on: ConcurrentDispatchQueueScheduler.init(qos: .background))
+                            .flatMap{ [unowned self] (input) -> Observable<HomeOutput> in
+                                switch input{
+                                case .loadData:
+                                    return handleDataLoad()
+                                case .personClicked(indexPath: let indexPath):
+                                    return handlePersonClick(at: indexPath)
+                                }
+                            }.bind(to: output))
         return disposables
     }
     
-
+    func handleDataLoad() -> Observable<HomeOutput>{
+        self.loaderPublisher.onNext(true)
+        return dependencies.birthdaysRepository
+            .getPersons()
+            .flatMap {[unowned self] result -> Observable<HomeOutput> in
+                switch result{
+                case .success(let data):
+                    return .just(.init(items: createScreenData(from: data.person), event: .reloadData))
+                case .failure(let error):
+                    return .just(.init(items: [], event: .error(error.localizedDescription)))
+                }
+        }
+    }
+    
+    func handlePersonClick(at indexPath: IndexPath) -> Observable<HomeOutput>{
+        if let item = output.value.items[indexPath.section].items[indexPath.row] as? HomeItem{
+            return .just(.init(items: output.value.items, event: .openDetails(person: item.item)))
+        }
+        return .just(.init(items: output.value.items, event: nil))
+    }
+    
+    func createScreenData(from persons: [PersonsQuery.Data.Person]) -> [HomeSectionItem]{
+        var screenData = [HomeSectionItem]()
+        screenData.append(HomeSectionItem(identity: "personSection", items: persons.map({ person -> HomeItem in
+            return HomeItem(identity: person.id, item: person)
+        })))
+        return screenData
+    }
 }
 
 protocol HomeViewModel {
