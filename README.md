@@ -1,6 +1,6 @@
 # Birthdays-App
 
-Installation is simple, just run the project in Xcode./n
+Installation is simple, just run the project in Xcode. \n
 Project was initialized with basic boilerplate code to save time./n
 In this project, I have used single-stream Rx MVVM architecture with minimal dependencies possible./n
 The layout is written programmatically and constrained using SnapKit./n
