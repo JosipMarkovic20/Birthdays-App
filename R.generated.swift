@@ -130,6 +130,50 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.file` struct is generated, and contains static references to 1 files.
+  struct file {
+    /// Resource file `PersonsQuery.graphql`.
+    static let personsQueryGraphql = Rswift.FileResource(bundle: R.hostingBundle, name: "PersonsQuery", pathExtension: "graphql")
+
+    /// `bundle.url(forResource: "PersonsQuery", withExtension: "graphql")`
+    static func personsQueryGraphql(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.personsQueryGraphql
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizible` struct is generated, and contains static references to 1 localization keys.
+    struct localizible {
+      /// en translation: Error
+      ///
+      /// Locales: en
+      static let error = Rswift.StringResource(key: "error", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Error
+      ///
+      /// Locales: en
+      static func error(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("error", tableName: "Localizible", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizible", preferredLanguages: preferredLanguages) else {
+          return "error"
+        }
+
+        return NSLocalizedString("error", tableName: "Localizible", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

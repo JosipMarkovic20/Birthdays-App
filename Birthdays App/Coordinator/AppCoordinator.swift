@@ -20,9 +20,14 @@ class AppCoordinator: Coordinator{
         let presenter = UINavigationController()
         window.rootViewController = presenter
         window.makeKeyAndVisible()
+        createHomeCoordinator(presenter: presenter)
     }
     
-
+    func createHomeCoordinator(presenter: UINavigationController){
+        let homeCoordinator = HomeCoordinator(navController: presenter)
+        self.addChildCoordinator(coordinator: homeCoordinator)
+        homeCoordinator.start()
+    }
 }
 
 extension AppCoordinator: CoordinatorDelegate{

@@ -22,6 +22,15 @@
 		74C64450268708CC0064B566 /* Localizible.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C64452268708CC0064B566 /* Localizible.strings */; };
 		74C64455268709230064B566 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64454268709230064B566 /* R.generated.swift */; };
 		74C644572687093E0064B566 /* ApolloManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C644562687093E0064B566 /* ApolloManager.swift */; };
+		74C6445926870C1F0064B566 /* PersonsQuery.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 74C6445826870C1F0064B566 /* PersonsQuery.graphql */; };
+		74C6445E26870EC10064B566 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6445D26870EC10064B566 /* API.swift */; };
+		74C6446326870F0E0064B566 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6446226870F0E0064B566 /* HomeCoordinator.swift */; };
+		74C6446526870F180064B566 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6446426870F180064B566 /* HomeViewModel.swift */; };
+		74C6446726870F260064B566 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6446626870F260064B566 /* HomeViewController.swift */; };
+		74C6446E26870FA20064B566 /* HomeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6446D26870FA20064B566 /* HomeOutput.swift */; };
+		74C6447026870FAC0064B566 /* HomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6446F26870FAC0064B566 /* HomeInput.swift */; };
+		74C6447226870FB60064B566 /* HomeBaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6447126870FB60064B566 /* HomeBaseItem.swift */; };
+		74C6447426870FBE0064B566 /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6447326870FBE0064B566 /* HomeItem.swift */; };
 		F199E673FE3732342E955350 /* Pods_Birthdays_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +55,16 @@
 		74C64451268708CC0064B566 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizible.strings; sourceTree = "<group>"; };
 		74C64454268709230064B566 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		74C644562687093E0064B566 /* ApolloManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloManager.swift; sourceTree = "<group>"; };
+		74C6445826870C1F0064B566 /* PersonsQuery.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = PersonsQuery.graphql; sourceTree = "<group>"; };
+		74C6445B26870DA70064B566 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		74C6445D26870EC10064B566 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		74C6446226870F0E0064B566 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		74C6446426870F180064B566 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		74C6446626870F260064B566 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		74C6446D26870FA20064B566 /* HomeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOutput.swift; sourceTree = "<group>"; };
+		74C6446F26870FAC0064B566 /* HomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInput.swift; sourceTree = "<group>"; };
+		74C6447126870FB60064B566 /* HomeBaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseItem.swift; sourceTree = "<group>"; };
+		74C6447326870FBE0064B566 /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +145,10 @@
 		74C64430268706C20064B566 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				74C6446C26870F970064B566 /* Models */,
+				74C6446126870EF80064B566 /* Coordinator */,
+				74C6446026870EF60064B566 /* ViewModel */,
+				74C6445F26870EF40064B566 /* UI */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,6 +217,7 @@
 		74C64438268706D60064B566 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				74C6445D26870EC10064B566 /* API.swift */,
 				74C6443A268707470064B566 /* LoaderProtocol.swift */,
 			);
 			path = Models;
@@ -202,8 +226,45 @@
 		74C64439268707330064B566 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				74C6445B26870DA70064B566 /* schema.json */,
+				74C6445826870C1F0064B566 /* PersonsQuery.graphql */,
 			);
 			path = Queries;
+			sourceTree = "<group>";
+		};
+		74C6445F26870EF40064B566 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				74C6446626870F260064B566 /* HomeViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		74C6446026870EF60064B566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74C6446426870F180064B566 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74C6446126870EF80064B566 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74C6446226870F0E0064B566 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74C6446C26870F970064B566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74C6446D26870FA20064B566 /* HomeOutput.swift */,
+				74C6446F26870FAC0064B566 /* HomeInput.swift */,
+				74C6447126870FB60064B566 /* HomeBaseItem.swift */,
+				74C6447326870FBE0064B566 /* HomeItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,8 +274,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74C6442B268705080064B566 /* Build configuration list for PBXNativeTarget "Birthdays App" */;
 			buildPhases = (
-				436015536CD59F4233DDF135 /* [CP] Check Pods Manifest.lock */,
 				74C64453268708EC0064B566 /* R-Swift */,
+				74C6445A26870D200064B566 /* Apollo CLI */,
+				436015536CD59F4233DDF135 /* [CP] Check Pods Manifest.lock */,
 				74C64413268705070064B566 /* Sources */,
 				74C64414268705070064B566 /* Frameworks */,
 				74C64415268705070064B566 /* Resources */,
@@ -267,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C64427268705080064B566 /* LaunchScreen.storyboard in Resources */,
+				74C6445926870C1F0064B566 /* PersonsQuery.graphql in Resources */,
 				74C64424268705080064B566 /* Assets.xcassets in Resources */,
 				74C64450268708CC0064B566 /* Localizible.strings in Resources */,
 			);
@@ -317,6 +380,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
+		74C6445A26870D200064B566 /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
 		F2070F2BD8F0C86CE62208EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,14 +425,22 @@
 				74C6443F2687079A0064B566 /* UIView+Extension.swift in Sources */,
 				74C6443B268707470064B566 /* LoaderProtocol.swift in Sources */,
 				74C6444D268708920064B566 /* AppCoordinator.swift in Sources */,
+				74C6447026870FAC0064B566 /* HomeInput.swift in Sources */,
 				74C64447268708390064B566 /* CoordinatorDelegate.swift in Sources */,
 				74C644572687093E0064B566 /* ApolloManager.swift in Sources */,
+				74C6446326870F0E0064B566 /* HomeCoordinator.swift in Sources */,
 				74C64449268708490064B566 /* ParentCoordinatorDelegate.swift in Sources */,
+				74C6446E26870FA20064B566 /* HomeOutput.swift in Sources */,
 				74C64443268707BC0064B566 /* Observable+Extension.swift in Sources */,
 				74C64445268707CD0064B566 /* UIViewControlle+Extension.swift in Sources */,
+				74C6445E26870EC10064B566 /* API.swift in Sources */,
 				74C6441B268705070064B566 /* AppDelegate.swift in Sources */,
+				74C6447426870FBE0064B566 /* HomeItem.swift in Sources */,
+				74C6446726870F260064B566 /* HomeViewController.swift in Sources */,
 				74C64441268707AE0064B566 /* UITableView+Extension.swift in Sources */,
+				74C6447226870FB60064B566 /* HomeBaseItem.swift in Sources */,
 				74C64455268709230064B566 /* R.generated.swift in Sources */,
+				74C6446526870F180064B566 /* HomeViewModel.swift in Sources */,
 				74C6444B268708800064B566 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
