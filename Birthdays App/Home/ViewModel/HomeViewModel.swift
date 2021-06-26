@@ -70,11 +70,13 @@ extension HomeViewModelImpl {
         var screenData = [HomeSectionItem]()
         screenData.append(HomeSectionItem(identity: "personSection", items: persons.map({ person -> HomeItem in
             let initials = person.name.components(separatedBy: " ").reduce("") { ($0 == "" ? "" : "\($0.first!)") + "\($1.first!)" }
-
+            let age = DateUtils.getAge(from: person.dateOfBirth)
+            let ageString = age == 1 ? "\(age) \(R.string.localizible.year_old().uppercased())" : "\(age) \(R.string.localizible.years_old().uppercased())"
             return HomeItem(identity: person.id, item: PersonViewItem(name: person.name,
                                                                       id: person.id,
                                                                       birthday: person.dateOfBirth,
-                                                                      initials: initials))
+                                                                      initials: initials,
+                                                                      age: ageString))
         })))
         return screenData
     }

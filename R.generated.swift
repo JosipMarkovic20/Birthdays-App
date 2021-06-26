@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -149,10 +150,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `PersonsQuery.graphql`.
     static let personsQueryGraphql = Rswift.FileResource(bundle: R.hostingBundle, name: "PersonsQuery", pathExtension: "graphql")
+    /// Resource file `Roboto-Bold.ttf`.
+    static let robotoBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Roboto-Bold", pathExtension: "ttf")
+    /// Resource file `Roboto-Regular.ttf`.
+    static let robotoRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Roboto-Regular", pathExtension: "ttf")
 
     /// `bundle.url(forResource: "PersonsQuery", withExtension: "graphql")`
     static func personsQueryGraphql(_: Void = ()) -> Foundation.URL? {
@@ -160,12 +165,49 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
+    /// `bundle.url(forResource: "Roboto-Bold", withExtension: "ttf")`
+    static func robotoBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.robotoBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "Roboto-Regular", withExtension: "ttf")`
+    static func robotoRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.robotoRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 2 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `Roboto-Bold`.
+    static let robotoBold = Rswift.FontResource(fontName: "Roboto-Bold")
+    /// Font `Roboto-Regular`.
+    static let robotoRegular = Rswift.FontResource(fontName: "Roboto-Regular")
+
+    /// `UIFont(name: "Roboto-Bold", size: ...)`
+    static func robotoBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: robotoBold, size: size)
+    }
+
+    /// `UIFont(name: "Roboto-Regular", size: ...)`
+    static func robotoRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: robotoRegular, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.robotoBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Roboto-Bold' could not be loaded, is 'Roboto-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.robotoRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'Roboto-Regular' could not be loaded, is 'Roboto-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
+
     fileprivate init() {}
   }
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizible` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.localizible` struct is generated, and contains static references to 5 localization keys.
     struct localizible {
       /// en translation: Birthdays
       ///
@@ -175,10 +217,18 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let error = Rswift.StringResource(key: "error", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
-      /// en translation: Go Back
+      /// en translation: go back
       ///
       /// Locales: en
       static let go_back = Rswift.StringResource(key: "go_back", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: year old
+      ///
+      /// Locales: en
+      static let year_old = Rswift.StringResource(key: "year_old", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: years old
+      ///
+      /// Locales: en
+      static let years_old = Rswift.StringResource(key: "years_old", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Birthdays
       ///
@@ -210,7 +260,7 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("error", tableName: "Localizible", bundle: bundle, comment: "")
       }
 
-      /// en translation: Go Back
+      /// en translation: go back
       ///
       /// Locales: en
       static func go_back(preferredLanguages: [String]? = nil) -> String {
@@ -223,6 +273,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("go_back", tableName: "Localizible", bundle: bundle, comment: "")
+      }
+
+      /// en translation: year old
+      ///
+      /// Locales: en
+      static func year_old(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("year_old", tableName: "Localizible", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizible", preferredLanguages: preferredLanguages) else {
+          return "year_old"
+        }
+
+        return NSLocalizedString("year_old", tableName: "Localizible", bundle: bundle, comment: "")
+      }
+
+      /// en translation: years old
+      ///
+      /// Locales: en
+      static func years_old(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("years_old", tableName: "Localizible", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizible", preferredLanguages: preferredLanguages) else {
+          return "years_old"
+        }
+
+        return NSLocalizedString("years_old", tableName: "Localizible", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

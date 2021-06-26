@@ -12,7 +12,7 @@ class HomeCell: UITableViewCell{
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 13, weight: .bold)
+        label.font = .robotoFontOf(size: 13, weight: .bold)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -20,7 +20,7 @@ class HomeCell: UITableViewCell{
     
     let birthdayLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 13, weight: .regular)
+        label.font = .robotoFontOf(size: 13, weight: .regular)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -36,7 +36,7 @@ class HomeCell: UITableViewCell{
     
     let initialsLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 32, weight: .bold)
+        label.font = .robotoFontOf(size: 32, weight: .bold)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -70,7 +70,7 @@ class HomeCell: UITableViewCell{
         
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(roundedView.snp.trailing).offset(14)
-            make.top.equalTo(roundedView)
+            make.top.equalTo(roundedView).offset(4)
             make.trailing.equalToSuperview().inset(16)
         }
         

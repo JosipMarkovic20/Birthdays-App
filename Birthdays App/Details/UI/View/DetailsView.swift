@@ -12,7 +12,7 @@ class DetailsView: UIView{
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 36, weight: .regular)
+        label.font = .robotoFontOf(size: 36, weight: .regular)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -20,7 +20,7 @@ class DetailsView: UIView{
     
     let birthdayLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 13, weight: .bold)
+        label.font = .robotoFontOf(size: 13, weight: .bold)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -36,7 +36,7 @@ class DetailsView: UIView{
     
     let initialsLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 64, weight: .bold)
+        label.font = .robotoFontOf(size: 64, weight: .bold)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
@@ -49,7 +49,7 @@ class DetailsView: UIView{
         button.setTitle(R.string.localizible.go_back().uppercased(), for: .normal)
         button.layer.cornerRadius = 6
         button.layer.masksToBounds = true
-        button.titleLabel?.font = .systemFont(ofSize: 13, weight: .bold)
+        button.titleLabel?.font = .robotoFontOf(size: 13, weight: .bold)
         return button
     }()
     
@@ -100,7 +100,7 @@ class DetailsView: UIView{
     
     func configure(with item: PersonViewItem){
         initialsLabel.text = item.initials
-        birthdayLabel.text = item.birthday
+        birthdayLabel.text = item.age
         nameLabel.text = item.name
     }
 }

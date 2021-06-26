@@ -40,6 +40,10 @@
 		74C6452526871AEF0064B566 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452426871AEF0064B566 /* DetailsViewModel.swift */; };
 		74C6452726871AF90064B566 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452626871AF90064B566 /* DetailsViewController.swift */; };
 		74C6452A26871B740064B566 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452926871B740064B566 /* DetailsView.swift */; };
+		74C6452C26871FD20064B566 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452B26871FD20064B566 /* DateUtils.swift */; };
+		74C6454C268722F30064B566 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74C6453A268722F20064B566 /* Roboto-Bold.ttf */; };
+		74C6454F268722F30064B566 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74C6453D268722F20064B566 /* Roboto-Regular.ttf */; };
+		74C64554268723730064B566 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64553268723730064B566 /* UIFont+Extension.swift */; };
 		F199E673FE3732342E955350 /* Pods_Birthdays_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,10 @@
 		74C6452426871AEF0064B566 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		74C6452626871AF90064B566 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		74C6452926871B740064B566 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		74C6452B26871FD20064B566 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		74C6453A268722F20064B566 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		74C6453D268722F20064B566 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		74C64553268723730064B566 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,7 @@
 		74C64434268706CB0064B566 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				74C6452D268722D80064B566 /* Fonts */,
 				74C64423268705080064B566 /* Assets.xcassets */,
 				74C64452268708CC0064B566 /* Localizible.strings */,
 				74C64518268717B40064B566 /* Colors.xcassets */,
@@ -224,6 +233,7 @@
 		74C64436268706D00064B566 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				74C6452B26871FD20064B566 /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -235,6 +245,7 @@
 				74C64440268707AE0064B566 /* UITableView+Extension.swift */,
 				74C64442268707BC0064B566 /* Observable+Extension.swift */,
 				74C64444268707CD0064B566 /* UIViewControlle+Extension.swift */,
+				74C64553268723730064B566 /* UIFont+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +353,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		74C6452D268722D80064B566 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				74C6453A268722F20064B566 /* Roboto-Bold.ttf */,
+				74C6453D268722F20064B566 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +425,8 @@
 			files = (
 				74C64519268717B40064B566 /* Colors.xcassets in Resources */,
 				74C64427268705080064B566 /* LaunchScreen.storyboard in Resources */,
+				74C6454C268722F30064B566 /* Roboto-Bold.ttf in Resources */,
+				74C6454F268722F30064B566 /* Roboto-Regular.ttf in Resources */,
 				74C6445926870C1F0064B566 /* PersonsQuery.graphql in Resources */,
 				74C64424268705080064B566 /* Assets.xcassets in Resources */,
 				74C64450268708CC0064B566 /* Localizible.strings in Resources */,
@@ -516,6 +538,7 @@
 				74C6441B268705070064B566 /* AppDelegate.swift in Sources */,
 				74C6452126871ADC0064B566 /* DetailsOutput.swift in Sources */,
 				74C6447426870FBE0064B566 /* HomeItem.swift in Sources */,
+				74C64554268723730064B566 /* UIFont+Extension.swift in Sources */,
 				74C64516268716EC0064B566 /* HomeCell.swift in Sources */,
 				74C6452526871AEF0064B566 /* DetailsViewModel.swift in Sources */,
 				74C6446726870F260064B566 /* HomeViewController.swift in Sources */,
@@ -523,6 +546,7 @@
 				74C64476268711DE0064B566 /* BirthdayRepository.swift in Sources */,
 				74C6447226870FB60064B566 /* HomeBaseItem.swift in Sources */,
 				74C6451F26871AD20064B566 /* DetailsInput.swift in Sources */,
+				74C6452C26871FD20064B566 /* DateUtils.swift in Sources */,
 				74C64455268709230064B566 /* R.generated.swift in Sources */,
 				74C6446526870F180064B566 /* HomeViewModel.swift in Sources */,
 				74C6444B268708800064B566 /* Coordinator.swift in Sources */,

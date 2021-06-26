@@ -26,11 +26,13 @@ public class PersonViewItem: Equatable {
     let id: String
     let birthday: String
     let initials: String
+    let age: String
     
-    init(name: String, id: String, birthday: String, initials: String) {
+    init(name: String, id: String, birthday: String, initials: String, age: String) {
         self.name = name
         self.id = id
         self.birthday = birthday
         self.initials = initials
+        self.age = age
     }
 }

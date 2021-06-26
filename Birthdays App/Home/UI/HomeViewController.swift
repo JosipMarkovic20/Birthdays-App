@@ -65,6 +65,8 @@ extension HomeViewController {
         setupConstraints()
         registerCells()
         self.title = R.string.localizible.birthdays()
+        let attributes = [NSAttributedString.Key.font: UIFont.robotoFontOf(size: 18, weight: .bold)]
+        UINavigationBar.appearance().titleTextAttributes = attributes
     }
 
     
