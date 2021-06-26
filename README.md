@@ -1,6 +1,6 @@
 # Birthdays-App
 
-Installation is simple, just run the project in Xcode. 
+Installation is simple, first you need to install dependecies using cocoapods and then just build and run the code in xocde. 
 Project was initialized with basic boilerplate code to save time. 
 In this project, I have used single-stream Rx MVVM architecture with minimal dependencies possible. 
 The layout is written programmatically and constrained using SnapKit. 
