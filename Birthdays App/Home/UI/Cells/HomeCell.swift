@@ -61,7 +61,7 @@ class HomeCell: UITableViewCell{
     func setupConstraints(){
         roundedView.snp.makeConstraints { make in
             make.top.leading.bottom.equalToSuperview().inset(14)
-            make.width.height.equalTo(69)
+            make.width.height.equalTo(69).priority(.high)
         }
         
         initialsLabel.snp.makeConstraints { make in
