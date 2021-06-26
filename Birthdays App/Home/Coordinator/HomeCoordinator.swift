@@ -48,7 +48,9 @@ extension HomeCoordinator: CoordinatorDelegate, ParentCoordinatorDelegate{
 
 extension HomeCoordinator: HomeNavigationDelegate{
     func navigateToDetails(person: PersonViewItem) {
-        
+        let coordinator = DetailsCoordinator(navController: navigationController, person: person)
+        addChildCoordinator(coordinator: coordinator)
+        coordinator.start()
     }
 }
 

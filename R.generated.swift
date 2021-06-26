@@ -165,7 +165,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizible` struct is generated, and contains static references to 2 localization keys.
+    /// This `R.string.localizible` struct is generated, and contains static references to 3 localization keys.
     struct localizible {
       /// en translation: Birthdays
       ///
@@ -175,6 +175,10 @@ struct R: Rswift.Validatable {
       ///
       /// Locales: en
       static let error = Rswift.StringResource(key: "error", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Go Back
+      ///
+      /// Locales: en
+      static let go_back = Rswift.StringResource(key: "go_back", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
 
       /// en translation: Birthdays
       ///
@@ -204,6 +208,21 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("error", tableName: "Localizible", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Go Back
+      ///
+      /// Locales: en
+      static func go_back(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("go_back", tableName: "Localizible", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizible", preferredLanguages: preferredLanguages) else {
+          return "go_back"
+        }
+
+        return NSLocalizedString("go_back", tableName: "Localizible", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

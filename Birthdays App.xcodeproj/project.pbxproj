@@ -34,6 +34,12 @@
 		74C64476268711DE0064B566 /* BirthdayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64475268711DE0064B566 /* BirthdayRepository.swift */; };
 		74C64516268716EC0064B566 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64515268716EC0064B566 /* HomeCell.swift */; };
 		74C64519268717B40064B566 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C64518268717B40064B566 /* Colors.xcassets */; };
+		74C6451F26871AD20064B566 /* DetailsInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6451E26871AD20064B566 /* DetailsInput.swift */; };
+		74C6452126871ADC0064B566 /* DetailsOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452026871ADC0064B566 /* DetailsOutput.swift */; };
+		74C6452326871AE80064B566 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452226871AE80064B566 /* DetailsCoordinator.swift */; };
+		74C6452526871AEF0064B566 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452426871AEF0064B566 /* DetailsViewModel.swift */; };
+		74C6452726871AF90064B566 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452626871AF90064B566 /* DetailsViewController.swift */; };
+		74C6452A26871B740064B566 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6452926871B740064B566 /* DetailsView.swift */; };
 		F199E673FE3732342E955350 /* Pods_Birthdays_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +77,12 @@
 		74C64475268711DE0064B566 /* BirthdayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRepository.swift; sourceTree = "<group>"; };
 		74C64515268716EC0064B566 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		74C64518268717B40064B566 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		74C6451E26871AD20064B566 /* DetailsInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInput.swift; sourceTree = "<group>"; };
+		74C6452026871ADC0064B566 /* DetailsOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOutput.swift; sourceTree = "<group>"; };
+		74C6452226871AE80064B566 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		74C6452426871AEF0064B566 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		74C6452626871AF90064B566 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		74C6452926871B740064B566 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,10 @@
 		74C6442F268706BF0064B566 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				74C6451D26871AB20064B566 /* Model */,
+				74C6451C26871AB00064B566 /* Coordinator */,
+				74C6451B26871AAE0064B566 /* ViewModel */,
+				74C6451A26871AAC0064B566 /* UI */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -282,6 +298,48 @@
 				74C64515268716EC0064B566 /* HomeCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		74C6451A26871AAC0064B566 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				74C6452826871B690064B566 /* View */,
+				74C6452626871AF90064B566 /* DetailsViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		74C6451B26871AAE0064B566 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				74C6452426871AEF0064B566 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74C6451C26871AB00064B566 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74C6452226871AE80064B566 /* DetailsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74C6451D26871AB20064B566 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74C6451E26871AD20064B566 /* DetailsInput.swift */,
+				74C6452026871ADC0064B566 /* DetailsOutput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74C6452826871B690064B566 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74C6452926871B740064B566 /* DetailsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,9 +499,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				74C6443F2687079A0064B566 /* UIView+Extension.swift in Sources */,
+				74C6452A26871B740064B566 /* DetailsView.swift in Sources */,
 				74C6443B268707470064B566 /* LoaderProtocol.swift in Sources */,
+				74C6452726871AF90064B566 /* DetailsViewController.swift in Sources */,
 				74C6444D268708920064B566 /* AppCoordinator.swift in Sources */,
 				74C6447026870FAC0064B566 /* HomeInput.swift in Sources */,
+				74C6452326871AE80064B566 /* DetailsCoordinator.swift in Sources */,
 				74C64447268708390064B566 /* CoordinatorDelegate.swift in Sources */,
 				74C644572687093E0064B566 /* ApolloManager.swift in Sources */,
 				74C6446326870F0E0064B566 /* HomeCoordinator.swift in Sources */,
@@ -453,12 +514,15 @@
 				74C64445268707CD0064B566 /* UIViewControlle+Extension.swift in Sources */,
 				74C6445E26870EC10064B566 /* API.swift in Sources */,
 				74C6441B268705070064B566 /* AppDelegate.swift in Sources */,
+				74C6452126871ADC0064B566 /* DetailsOutput.swift in Sources */,
 				74C6447426870FBE0064B566 /* HomeItem.swift in Sources */,
 				74C64516268716EC0064B566 /* HomeCell.swift in Sources */,
+				74C6452526871AEF0064B566 /* DetailsViewModel.swift in Sources */,
 				74C6446726870F260064B566 /* HomeViewController.swift in Sources */,
 				74C64441268707AE0064B566 /* UITableView+Extension.swift in Sources */,
 				74C64476268711DE0064B566 /* BirthdayRepository.swift in Sources */,
 				74C6447226870FB60064B566 /* HomeBaseItem.swift in Sources */,
+				74C6451F26871AD20064B566 /* DetailsInput.swift in Sources */,
 				74C64455268709230064B566 /* R.generated.swift in Sources */,
 				74C6446526870F180064B566 /* HomeViewModel.swift in Sources */,
 				74C6444B268708800064B566 /* Coordinator.swift in Sources */,
