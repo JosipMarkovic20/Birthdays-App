@@ -3,27 +3,49 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		74C6441B268705070064B566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6441A268705070064B566 /* AppDelegate.swift */; };
-		74C6441D268705070064B566 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6441C268705070064B566 /* SceneDelegate.swift */; };
-		74C6441F268705070064B566 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6441E268705070064B566 /* ViewController.swift */; };
-		74C64422268705070064B566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C64420268705070064B566 /* Main.storyboard */; };
 		74C64424268705080064B566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C64423268705080064B566 /* Assets.xcassets */; };
 		74C64427268705080064B566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C64425268705080064B566 /* LaunchScreen.storyboard */; };
+		74C6443B268707470064B566 /* LoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6443A268707470064B566 /* LoaderProtocol.swift */; };
+		74C6443F2687079A0064B566 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6443E2687079A0064B566 /* UIView+Extension.swift */; };
+		74C64441268707AE0064B566 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64440268707AE0064B566 /* UITableView+Extension.swift */; };
+		74C64443268707BC0064B566 /* Observable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64442268707BC0064B566 /* Observable+Extension.swift */; };
+		74C64445268707CD0064B566 /* UIViewControlle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64444268707CD0064B566 /* UIViewControlle+Extension.swift */; };
+		74C64447268708390064B566 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64446268708390064B566 /* CoordinatorDelegate.swift */; };
+		74C64449268708490064B566 /* ParentCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64448268708490064B566 /* ParentCoordinatorDelegate.swift */; };
+		74C6444B268708800064B566 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6444A268708800064B566 /* Coordinator.swift */; };
+		74C6444D268708920064B566 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6444C268708920064B566 /* AppCoordinator.swift */; };
+		74C64450268708CC0064B566 /* Localizible.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74C64452268708CC0064B566 /* Localizible.strings */; };
+		74C64455268709230064B566 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C64454268709230064B566 /* R.generated.swift */; };
+		74C644572687093E0064B566 /* ApolloManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C644562687093E0064B566 /* ApolloManager.swift */; };
+		F199E673FE3732342E955350 /* Pods_Birthdays_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054F1C82BF756AE2FE8F28BE /* Pods-Birthdays App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthdays App.debug.xcconfig"; path = "Target Support Files/Pods-Birthdays App/Pods-Birthdays App.debug.xcconfig"; sourceTree = "<group>"; };
+		0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birthdays_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F498E3F68C9D4AB7B9FB114 /* Pods-Birthdays App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birthdays App.release.xcconfig"; path = "Target Support Files/Pods-Birthdays App/Pods-Birthdays App.release.xcconfig"; sourceTree = "<group>"; };
 		74C64417268705070064B566 /* Birthdays App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birthdays App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C6441A268705070064B566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74C6441C268705070064B566 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		74C6441E268705070064B566 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		74C64421268705070064B566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74C64423268705080064B566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74C64426268705080064B566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74C64428268705080064B566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C6443A268707470064B566 /* LoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderProtocol.swift; sourceTree = "<group>"; };
+		74C6443E2687079A0064B566 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		74C64440268707AE0064B566 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		74C64442268707BC0064B566 /* Observable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Extension.swift"; sourceTree = "<group>"; };
+		74C64444268707CD0064B566 /* UIViewControlle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControlle+Extension.swift"; sourceTree = "<group>"; };
+		74C64446268708390064B566 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		74C64448268708490064B566 /* ParentCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		74C6444A268708800064B566 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		74C6444C268708920064B566 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		74C64451268708CC0064B566 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizible.strings; sourceTree = "<group>"; };
+		74C64454268709230064B566 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		74C644562687093E0064B566 /* ApolloManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F199E673FE3732342E955350 /* Pods_Birthdays_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18228971C6732F464187FAAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				054F1C82BF756AE2FE8F28BE /* Pods-Birthdays App.debug.xcconfig */,
+				2F498E3F68C9D4AB7B9FB114 /* Pods-Birthdays App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		20B3B2B61F7B5A1C41887864 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0991AC48808834E0F541549A /* Pods_Birthdays_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74C6440E268705070064B566 = {
 			isa = PBXGroup;
 			children = (
 				74C64419268705070064B566 /* Birthdays App */,
 				74C64418268705070064B566 /* Products */,
+				18228971C6732F464187FAAC /* Pods */,
+				20B3B2B61F7B5A1C41887864 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +98,112 @@
 		74C64419268705070064B566 /* Birthdays App */ = {
 			isa = PBXGroup;
 			children = (
-				74C6441A268705070064B566 /* AppDelegate.swift */,
-				74C6441C268705070064B566 /* SceneDelegate.swift */,
-				74C6441E268705070064B566 /* ViewController.swift */,
-				74C64420268705070064B566 /* Main.storyboard */,
-				74C64423268705080064B566 /* Assets.xcassets */,
+				74C64439268707330064B566 /* Queries */,
+				74C64438268706D60064B566 /* Models */,
+				74C64437268706D30064B566 /* Extensions */,
+				74C64436268706D00064B566 /* Utils */,
+				74C64435268706CE0064B566 /* Networking */,
+				74C64434268706CB0064B566 /* Assets */,
+				74C64433268706C90064B566 /* Coordinator */,
+				74C64432268706C70064B566 /* Delegates */,
+				74C64431268706C40064B566 /* Repositories */,
+				74C64430268706C20064B566 /* Home */,
+				74C6442F268706BF0064B566 /* Details */,
 				74C64425268705080064B566 /* LaunchScreen.storyboard */,
+				74C64454268709230064B566 /* R.generated.swift */,
 				74C64428268705080064B566 /* Info.plist */,
 			);
 			path = "Birthdays App";
+			sourceTree = "<group>";
+		};
+		74C6442F268706BF0064B566 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		74C64430268706C20064B566 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		74C64431268706C40064B566 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		74C64432268706C70064B566 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				74C6441A268705070064B566 /* AppDelegate.swift */,
+				74C64446268708390064B566 /* CoordinatorDelegate.swift */,
+				74C64448268708490064B566 /* ParentCoordinatorDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		74C64433268706C90064B566 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				74C6444A268708800064B566 /* Coordinator.swift */,
+				74C6444C268708920064B566 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		74C64434268706CB0064B566 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				74C64423268705080064B566 /* Assets.xcassets */,
+				74C64452268708CC0064B566 /* Localizible.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		74C64435268706CE0064B566 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				74C644562687093E0064B566 /* ApolloManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		74C64436268706D00064B566 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		74C64437268706D30064B566 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74C6443E2687079A0064B566 /* UIView+Extension.swift */,
+				74C64440268707AE0064B566 /* UITableView+Extension.swift */,
+				74C64442268707BC0064B566 /* Observable+Extension.swift */,
+				74C64444268707CD0064B566 /* UIViewControlle+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74C64438268706D60064B566 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74C6443A268707470064B566 /* LoaderProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74C64439268707330064B566 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74C6442B268705080064B566 /* Build configuration list for PBXNativeTarget "Birthdays App" */;
 			buildPhases = (
+				436015536CD59F4233DDF135 /* [CP] Check Pods Manifest.lock */,
+				74C64453268708EC0064B566 /* R-Swift */,
 				74C64413268705070064B566 /* Sources */,
 				74C64414268705070064B566 /* Frameworks */,
 				74C64415268705070064B566 /* Resources */,
+				F2070F2BD8F0C86CE62208EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,40 +268,111 @@
 			files = (
 				74C64427268705080064B566 /* LaunchScreen.storyboard in Resources */,
 				74C64424268705080064B566 /* Assets.xcassets in Resources */,
-				74C64422268705070064B566 /* Main.storyboard in Resources */,
+				74C64450268708CC0064B566 /* Localizible.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		436015536CD59F4233DDF135 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Birthdays App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74C64453268708EC0064B566 /* R-Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R-Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		F2070F2BD8F0C86CE62208EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birthdays App/Pods-Birthdays App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birthdays App/Pods-Birthdays App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birthdays App/Pods-Birthdays App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		74C64413268705070064B566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C6441F268705070064B566 /* ViewController.swift in Sources */,
+				74C6443F2687079A0064B566 /* UIView+Extension.swift in Sources */,
+				74C6443B268707470064B566 /* LoaderProtocol.swift in Sources */,
+				74C6444D268708920064B566 /* AppCoordinator.swift in Sources */,
+				74C64447268708390064B566 /* CoordinatorDelegate.swift in Sources */,
+				74C644572687093E0064B566 /* ApolloManager.swift in Sources */,
+				74C64449268708490064B566 /* ParentCoordinatorDelegate.swift in Sources */,
+				74C64443268707BC0064B566 /* Observable+Extension.swift in Sources */,
+				74C64445268707CD0064B566 /* UIViewControlle+Extension.swift in Sources */,
 				74C6441B268705070064B566 /* AppDelegate.swift in Sources */,
-				74C6441D268705070064B566 /* SceneDelegate.swift in Sources */,
+				74C64441268707AE0064B566 /* UITableView+Extension.swift in Sources */,
+				74C64455268709230064B566 /* R.generated.swift in Sources */,
+				74C6444B268708800064B566 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		74C64420268705070064B566 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				74C64421268705070064B566 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		74C64425268705080064B566 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				74C64426268705080064B566 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		74C64452268708CC0064B566 /* Localizible.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C64451268708CC0064B566 /* en */,
+			);
+			name = Localizible.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -216,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +484,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,10 +496,12 @@
 		};
 		74C6442C268705080064B566 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 054F1C82BF756AE2FE8F28BE /* Pods-Birthdays App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				GRAPHQL_ENDPOINT = "https://birthday-api.hasura.app/v1/graphql";
 				INFOPLIST_FILE = "Birthdays App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,10 +516,12 @@
 		};
 		74C6442D268705080064B566 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F498E3F68C9D4AB7B9FB114 /* Pods-Birthdays App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				GRAPHQL_ENDPOINT = "https://birthday-api.hasura.app/v1/graphql";
 				INFOPLIST_FILE = "Birthdays App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
