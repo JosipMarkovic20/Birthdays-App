@@ -105,10 +105,12 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 2 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `circle_background`.
+    static let circle_background = Rswift.ColorResource(bundle: R.hostingBundle, name: "circle_background")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -119,11 +121,28 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "circle_background", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func circle_background(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.circle_background, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "circle_background", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func circle_background(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.circle_background.name)
     }
     #endif
 
@@ -146,12 +165,31 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizible` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizible` struct is generated, and contains static references to 2 localization keys.
     struct localizible {
+      /// en translation: Birthdays
+      ///
+      /// Locales: en
+      static let birthdays = Rswift.StringResource(key: "birthdays", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Error
       ///
       /// Locales: en
       static let error = Rswift.StringResource(key: "error", tableName: "Localizible", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Birthdays
+      ///
+      /// Locales: en
+      static func birthdays(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("birthdays", tableName: "Localizible", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizible", preferredLanguages: preferredLanguages) else {
+          return "birthdays"
+        }
+
+        return NSLocalizedString("birthdays", tableName: "Localizible", bundle: bundle, comment: "")
+      }
 
       /// en translation: Error
       ///

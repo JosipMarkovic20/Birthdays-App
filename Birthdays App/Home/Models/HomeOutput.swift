@@ -17,7 +17,7 @@ struct HomeOutput{
 enum HomeOutputEvent{
     case reloadData
     case error(_ message: String)
-    case openDetails(person: PersonsQuery.Data.Person)
+    case openDetails(person: PersonViewItem)
 }
 
 public struct HomeSectionItem: Equatable{

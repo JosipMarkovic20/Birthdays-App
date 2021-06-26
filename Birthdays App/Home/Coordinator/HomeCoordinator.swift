@@ -29,7 +29,7 @@ class HomeCoordinator: NSObject, Coordinator {
     }
 
     func createHomeViewController() -> HomeViewController {
-        let viewModel = HomeViewModelImpl(dependencies: HomeViewModelImpl.Dependencies())
+        let viewModel = HomeViewModelImpl(dependencies: HomeViewModelImpl.Dependencies(birthdaysRepository: BirthdaysRepositoryImpl()))
         let viewController = HomeViewController(viewModel: viewModel)
         viewController.homeNavigationDelegate = self
         return viewController
@@ -46,7 +46,12 @@ extension HomeCoordinator: CoordinatorDelegate, ParentCoordinatorDelegate{
     }
 }
 
+extension HomeCoordinator: HomeNavigationDelegate{
+    func navigateToDetails(person: PersonViewItem) {
+        
+    }
+}
 
 protocol HomeNavigationDelegate: AnyObject {
-    func navigateToDetails(activity: PersonsQuery)
+    func navigateToDetails(person: PersonViewItem)
 }

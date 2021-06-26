@@ -49,6 +49,7 @@ extension HomeViewModelImpl {
         return dependencies.birthdaysRepository
             .getPersons()
             .flatMap {[unowned self] result -> Observable<HomeOutput> in
+                self.loaderPublisher.onNext(false)
                 switch result{
                 case .success(let data):
                     return .just(.init(items: createScreenData(from: data.person), event: .reloadData))
@@ -68,7 +69,12 @@ extension HomeViewModelImpl {
     func createScreenData(from persons: [PersonsQuery.Data.Person]) -> [HomeSectionItem]{
         var screenData = [HomeSectionItem]()
         screenData.append(HomeSectionItem(identity: "personSection", items: persons.map({ person -> HomeItem in
-            return HomeItem(identity: person.id, item: person)
+            let initials = person.name.components(separatedBy: " ").reduce("") { ($0 == "" ? "" : "\($0.first!)") + "\($1.first!)" }
+
+            return HomeItem(identity: person.id, item: PersonViewItem(name: person.name,
+                                                                      id: person.id,
+                                                                      birthday: person.dateOfBirth,
+                                                                      initials: initials))
         })))
         return screenData
     }

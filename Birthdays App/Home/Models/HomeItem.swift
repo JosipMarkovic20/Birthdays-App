@@ -8,11 +8,29 @@
 import Foundation
 
 public class HomeItem: HomeBaseItem{
-    let item: PersonsQuery.Data.Person
+    let item: PersonViewItem
 
-    init(identity: String, item: PersonsQuery.Data.Person) {
+    init(identity: String, item: PersonViewItem) {
         self.item = item
         super.init(identity: identity)
     }
 }
 
+public class PersonViewItem: Equatable {
+    
+    public static func == (lhs: PersonViewItem, rhs: PersonViewItem) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    let name: String
+    let id: String
+    let birthday: String
+    let initials: String
+    
+    init(name: String, id: String, birthday: String, initials: String) {
+        self.name = name
+        self.id = id
+        self.birthday = birthday
+        self.initials = initials
+    }
+}

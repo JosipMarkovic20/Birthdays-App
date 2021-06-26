@@ -14,7 +14,7 @@ public enum ApolloError: Error {
 }
 
 public class ApolloManager{
-    private static let graphQLEndpoint: String = Bundle.main.infoDictionary!["GRAPH_QL_ENDPOINT"] as! String
+    private static let graphQLEndpoint: String = Bundle.main.infoDictionary!["GRAPHQL_ENDPOINT"] as! String
     private static let apollo = ApolloClient(url: URL(string:graphQLEndpoint)!)
     
     public static func requestObservable<Query: GraphQLQuery>(query: Query) -> Observable<Query.Data>{

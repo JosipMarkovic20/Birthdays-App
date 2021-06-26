@@ -47,7 +47,12 @@ public final class HomeViewController: UIViewController, UITableViewDelegate, Lo
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar(){
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = UIColor.white
     }
 }
 
@@ -59,6 +64,7 @@ extension HomeViewController {
         view.addSubview(tableView)
         setupConstraints()
         registerCells()
+        self.title = R.string.localizible.birthdays()
     }
 
     
@@ -69,7 +75,7 @@ extension HomeViewController {
     }
     
     func registerCells(){
-        
+        self.tableView.register(HomeCell.self, forCellReuseIdentifier: "HomeCell")
     }
     
     func bindDataSource(){
@@ -77,8 +83,11 @@ extension HomeViewController {
         
         dataSource = RxTableViewSectionedAnimatedDataSource<HomeSectionItem>{ (dataSource, tableView, indexPath, rowItem) -> UITableViewCell in
             let item = dataSource[indexPath.section].items[indexPath.row]
-
-            return UITableViewCell()
+            let cell: HomeCell = tableView.dequeueCell(identifier: "HomeCell")
+            if let safeItem = item as? HomeItem{
+                cell.configure(item: safeItem.item)
+            }
+            return cell
         }
         self.dataSource.animationConfiguration = .init(insertAnimation: .top, reloadAnimation: .fade, deleteAnimation: .automatic)
         
@@ -94,8 +103,8 @@ extension HomeViewController {
             .subscribe(onNext: {[unowned self] (output) in
                 guard let safeEvent = output.event else { return }
                 switch safeEvent{
-                case .openDetails(let activity):
-                    homeNavigationDelegate?.navigateToDetails(activity: activity)
+                case .openDetails(let person):
+                    homeNavigationDelegate?.navigateToDetails(person: person)
                 case .error(let message):
                     showAlertWith(title: R.string.localizible.error(), message: message)
                 case .reloadData:
